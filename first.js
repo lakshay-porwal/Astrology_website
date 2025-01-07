@@ -150,11 +150,16 @@ form.addEventListener('submit',(event)=>{
  result.innerHTML = `${f_message} !!!<br> <b>${s_message}.</b> ${t_message} ${fourth_message}<br>
  <b>Our recommendation:</b> ${five_message}<br>
  <b>Future Prediction:</b> ${six_message}`;
+    //for smoth scroll to down
+ result.scrollIntoView({ behavior: 'smooth', block: 'start' });
 })
 
 //rest button is clicked
 document.getElementById('reset').addEventListener('click',()=>{
     result.innerHTML=``;
+     //scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
 })
 
 
